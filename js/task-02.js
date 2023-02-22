@@ -10,14 +10,13 @@ const ingredients = [
   "Herbs",
   "Condiments",
 ];
-const ingredientsList = document.querySelector(".ingredients");
-const ingredientsItems = ingredients.map((ingredient) => {
-  const item = document.createElement("li");
-  item.textContent = ingredient;
-  item.classList.add("item");
-  return item;
-});
-console.log(ingredientsList);
+const ingredientsList = document.querySelector("ul#ingredients");
+const ingredientItem = document.createElement("ul");
+ingredients.forEach(value => {
+const listItem = document.createElement("li"); 
+})
+//splice(position, 0, new_element_1, new_element_2, ...)
+//colors.splice(1, 0, "yellow", "pink")
 
 //const technologies = ["HTML", "CSS", "JavaScript", "React", "Node"];
 //const list = document.querySelector(".list");
