@@ -11,14 +11,13 @@ const ingredients = [
   "Condiments",
 ];
 const ingredientsList = document.querySelector("ul#ingredients");
-ingredients.map((value) => {
+const list = ingredients.map((ingredient) => {
   const listItem = document.createElement("li");
-  listItem.textContent = value;
+  listItem.textContent = ingredient;
   listItem.classList.add("listItem");
-
   return listItem;
 });
-ingredientsList.append(...listItem);
+ingredientsList.append(...list);
 //splice(position, 0, new_element_1, new_element_2, ...)
 //colors.splice(1, 0, "yellow", "pink")
 
