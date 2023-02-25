@@ -13,9 +13,11 @@ const images = [
   },
 ];
 
-const imagesEl = document.querySelector(".gallery");
-
-
+const imagesList = document.querySelector(".gallery");
+const imagesEl = images.map((element) => `<li><img src = "${element.src}" 
+  alt = "${element.alt}"</li>`
+); 
+imagesList.insertAdjacentHTML(imagesEl);
 //const list = document.querySelector(".list");
 
 //const newTechnologies = ["React", "TypeScript", "Node.js"];
