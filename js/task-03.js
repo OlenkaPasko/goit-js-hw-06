@@ -14,10 +14,13 @@ const images = [
 ];
 
 const imagesList = document.querySelector(".gallery");
-const imagesEl = images.map((element) => `<li><img src = "${element.src}" 
+const imagesEl = images
+  .map(
+    (element) => `<li class="list-item"><img src = "${element.url}" 
   alt = "${element.alt}"</li>`
-); 
-imagesList.insertAdjacentHTML(imagesEl);
+  )
+  .join(" ");
+imagesList.insertAdjacentHTML("beforeend", imagesEl);
 //const list = document.querySelector(".list");
 
 //const newTechnologies = ["React", "TypeScript", "Node.js"];

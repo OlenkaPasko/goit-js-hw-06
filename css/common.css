@@ -22,3 +22,9 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+.list-item {
+  display: flex;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
