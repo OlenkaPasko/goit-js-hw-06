@@ -37,7 +37,7 @@ textInput.addEventListener("blur", () => {
 valid і invalid, які ми вже додали у вихідні файли завдання.
 contentsInput - вхід вмісту*/
 const textInput = document.querySelector("#validation-input");
-const contentsInput = (event) => {
+const contentsInput = event => {
   if (event.currentTarget.value.length === Number(textInput.dataset.length)) {
     textInput.classList.remove("valid");
     textInput.classList.add("invalid");
