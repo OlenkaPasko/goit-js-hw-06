@@ -34,8 +34,13 @@ textInput.addEventListener("input", (event) => {
 
 <input type="text" id="name-input" placeholder="Please enter your name" />
     <h1>Hello, <span id="name-output">Anonymous</span>!</h1>*/
-
-//знайти input#name
+//span.textContent = inputValue === "" ? "Anonimous" : inputValue;
+//знайти input#name,ame-output;
 //підставити поточне значення
 //якщо інпут порожній - рядок "Anonymous"
+const nameInput = document.querySelector("#name-input"); 
+const nameOutput = document.querySelector("#name-output");
 
+nameOutput.addEventListener("input", (event) => {
+    nameInput.textContent = inputValue === "" ? "Anonimous" : inputValue;
+});
