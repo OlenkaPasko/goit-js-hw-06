@@ -11,7 +11,7 @@ function formSubmit(event) {
     emailEl,
     passwordEl,
   };
-  if (email === " " || password === " ") {
+  if (emailEl === " " || passwordEl === " ") {
     alert("Please fill in all the fields!");
   } else {
     console.log(formAllattribute);
