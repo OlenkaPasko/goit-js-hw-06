@@ -1,60 +1,21 @@
-/*скрипт управління формою логіна
-
-Обробка відправлення форми form.login-form 
-повинна відбуватися відповідно до події submit.
-
-Під час відправлення форми сторінка 
-не повинна перезавантажуватися.
-
-Якщо у формі є незаповнені поля, 
-виводь alert з попередженням про те, що всі поля повинні бути заповнені.
-Якщо користувач заповнив усі поля і відправив форму, 
-збери значення полів в об'єкт, де ім'я поля буде ім'ям властивості, 
-а значення поля - значенням властивості. 
-Для доступу до елементів форми використовуй властивість elements.
-Виведи об'єкт із введеними даними в консоль
- і очисти значення полів форми методом reset.
- 
- const form = document.querySelector(".form");
-
-form.addEventListener("submit", handleSubmit);
-
-function handleSubmit(event) {
-  event.preventDefault();
-  const {
-    elements: { login, password }
-  } = event.currentTarget;
-
-  if (login.value === "" || password.value === "") {
-    return console.log("Please fill in all the fields!");
-  }
-
-  console.log(`Login: ${login.value}, Password: ${password.value}`);
-  event.currentTarget.reset();
-}*/
- 
 const form = document.querySelector(".login-form");
 form.addEventListener("submit", formSubmit);
 
 function formSubmit(event) {
-    event.preventDefault();
-    const formEl = event.currentTarget.elements;
-    const emailEl = formEl.email.value;
-    const passwordEl = formEl.password.value;
-    
-    const formAllattribute = {
-      emailEl,
-      passwordEl,
-    }
-    if
-        (email === " " || password === " ") {
-        alert("Please fill in all the fields!")
-    }
-    
-    else {
-        console.log(formAllattribute);
-    }
+  event.preventDefault();
+  const formEl = event.currentTarget.elements;
+  const emailEl = formEl.email.value;
+  const passwordEl = formEl.password.value;
 
-    event.currentTarget.reset()
+  const formAllattribute = {
+    emailEl,
+    passwordEl,
+  };
+  if (email === " " || password === " ") {
+    alert("Please fill in all the fields!");
+  } else {
+    console.log(formAllattribute);
+  }
+
+  event.currentTarget.reset();
 }
-
