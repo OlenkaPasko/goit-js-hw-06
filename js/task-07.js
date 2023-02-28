@@ -1,13 +1,9 @@
-const input = document.querySelector("input#font-size-control");
-const output = document.querySelector("span#text");
+const input = document.querySelector("#font-size-control");
+const output = document.querySelector("#text");
+
+output.style.fontSize = `${input.value}px`;
 
 const changeOfValue = (event) => {
-  let fontChange = event.currentTarget.min;
-  if (
-    changeOfValue > event.currentTarget.min &&
-    event.currentTarget.max + "px"
-  ) {
-    output.style.fontSize = changeOfValue;
-  }
+  output.style.fontSize = `${event.target.value}px`;
 };
 input.addEventListener("input", changeOfValue);
